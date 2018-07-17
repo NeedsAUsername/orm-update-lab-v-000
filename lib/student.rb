@@ -45,6 +45,9 @@ class Student
         new.save
     end
 
+    def new_from_db
+    end
+
     def update
     end
 end
