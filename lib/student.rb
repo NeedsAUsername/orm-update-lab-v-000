@@ -44,7 +44,7 @@ class Student
     def self.create(name, grade)
         new = self.new(name, grade)
         sql = <<-SQL
-            INSER INTO students (name, grade)
+            INSERT INTO students (name, grade)
             VALUES (?, ?)
         SQL
 
