@@ -56,7 +56,7 @@ class Student
             WHERE students.name = ?
         SQL
 
-        student = DB[:conn].execute(sql, name)
+        student = DB[:conn].execute(sql, name)[0]
         self.new(student[1], student[2], student[0])
     end
 
