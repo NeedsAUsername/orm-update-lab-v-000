@@ -45,7 +45,12 @@ class Student
         new.save
     end
 
-    def new_from_db
+    def self.new_from_db(row)
+        new = self.new
+        new.id = row[0]
+        new.name = row[1]
+        new.grade = row[2]
+        new
     end
 
     def update
